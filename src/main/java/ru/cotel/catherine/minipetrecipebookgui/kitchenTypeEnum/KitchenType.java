@@ -1,0 +1,26 @@
+package ru.cotel.catherine.minipetrecipebookgui.kitchenTypeEnum;
+
+public enum KitchenType {
+    AMERICAN_FOOD,
+    ARMENIAN_FOOD,
+    AUSTRIAN_FOOD,
+    BELARUSIAN_FOOD,
+    CAUCASIAN_FOOD,
+    CHINESE_FOOD,
+    EUROPEAN_FOOD,
+    FRENCH_FOOD,
+    GREEK_FOOD,
+    GEORGIAN_FOOD,
+    GERMAN_FOOD,
+    INDIAN_FOOD,
+    ITALIAN_FOOD,
+    JAPAN_FOOD,
+    KOREAN_FOOD,
+    MEDITERRANEAN_FOOD,
+    MEXICAN_FOOD,
+    RUSSIAN_FOOD,
+    THAI_FOOD,
+    TURKISH_FOOD,
+    UKRAINIAN_FOOD,
+    UZBEK_FOOD
+}
