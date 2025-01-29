@@ -3,45 +3,39 @@ package ru.cotel.catherine.minipetrecipebookgui.controller;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
-import javafx.scene.control.Label;
-import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
+import javafx.scene.control.TextArea;
+import javafx.scene.control.TextField;
+import javafx.scene.layout.Pane;
 import ru.cotel.catherine.minipetrecipebookgui.ChangeWindowInterface;
-import ru.cotel.catherine.minipetrecipebookgui.recipeList.RecipeList;
 
-public class RecipeController implements ChangeWindowInterface {
-
-    @FXML
-    public Button buttonRecipeList;
+public class AddNewRecipe implements ChangeWindowInterface {
 
     @FXML
-    public Button buttonThems;
+    private Button buttonAddNewRecipe;
 
     @FXML
-    public Button buttonFavorites;
+    private Button buttonFavorites;
 
     @FXML
-    public Button buttonWeeklyMenu;
+    private Button buttonRecipeList;
 
     @FXML
-    public Button buttonAddNewRecipe;
+    private Button buttonThems;
 
     @FXML
-    public TextFlow textPane;
+    private Button buttonWeeklyMenu;
 
     @FXML
-    public Label recipeName;
-
-    private SetAndGetSomeText textForLabel = new SetAndGetSomeText();
-    private RecipeList recipeList = new RecipeList();
+    private TextArea ingridients;
 
     @FXML
-    void initialize() {
-        String title = textForLabel.getSomeText();
-        recipeName.setText(title);
-        Text text = new Text(recipeList.getTextFromFile(title));
-        textPane.getChildren().add(text);
-    }
+    private TextArea instruction;
+
+    @FXML
+    private Pane paneMenu;
+
+    @FXML
+    private TextField titleRecipe;
 
     @FXML
     void onButtonAddNewRecipe(ActionEvent event) {
@@ -68,4 +62,11 @@ public class RecipeController implements ChangeWindowInterface {
     void onButtonWeeklyMenuClick(ActionEvent event) {
         changeWindow(buttonWeeklyMenu, "weekly-menu.fxml");
     }
+
+    @FXML
+    void initialize() {
+
+    }
+
 }
+

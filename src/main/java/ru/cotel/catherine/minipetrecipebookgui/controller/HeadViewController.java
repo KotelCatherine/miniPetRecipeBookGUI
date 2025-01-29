@@ -1,27 +1,24 @@
 package ru.cotel.catherine.minipetrecipebookgui.controller;
 
-import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.stage.Stage;
-import ru.cotel.catherine.minipetrecipebookgui.HelloApplication;
+import javafx.scene.layout.Pane;
+import ru.cotel.catherine.minipetrecipebookgui.ChangeWindowInterface;
 
-import java.io.IOException;
-
-public class HeadViewController {
+public class HeadViewController implements ChangeWindowInterface {
     @FXML
     public Button buttonRecipeList;
     @FXML
     public Button buttonWeeklyMenu;
     @FXML
-    public Button buttonSearchRecipe;
-    @FXML
     public Button buttonFavorites;
     @FXML
     public Button buttonThems;
+    @FXML
+    public Button buttonAddNewRecipe;
+    @FXML
+    public Pane pane;
 
     @FXML
     void initialize() {
@@ -31,30 +28,11 @@ public class HeadViewController {
 
     @FXML
     public void onButtonThemsClick() {
-        buttonThems.setOnAction(event -> {
-            buttonThems.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource(""));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
+        changeWindow(buttonThems, "thems-view.fxml");
     }
 
     @FXML
     public void onButtonFavoritesClick() {
-    }
-
-    @FXML
-    public void onButtonSearchRecipeClick() {
     }
 
     @FXML
@@ -64,21 +42,11 @@ public class HeadViewController {
 
     @FXML
     public void onButtonRecipeListClick() {
-        buttonRecipeList.setOnAction(event -> {
-            buttonRecipeList.getScene().getWindow().hide();
-
-            FXMLLoader loader = new FXMLLoader(HelloApplication.class.getResource("recipe-list-view.fxml"));
-
-            try {
-                loader.load();
-            } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-
-            Parent root = loader.getRoot();
-            Stage stage = new Stage();
-            stage.setScene(new Scene(root));
-            stage.showAndWait();
-        });
+        changeWindow(buttonRecipeList, "recipe-list-view.fxml");
     }
+
+    public void onButtonAddNewRecipe(ActionEvent actionEvent) {
+    }
+
+
 }

@@ -1,3 +1,23 @@
-.bodybg{
+#paneMenu {
+    -fx-background-image: url("image/menu3.jpg");
+    -fx-background-size: 100% 100%;
+}
+#pane {
+    -fx-background-image: url("image/pane.jpeg");
+    -fx-background-size: 100% 100%;
+}
 
+#buttonRecipeList, #buttonWeeklyMenu, #buttonFavorites,#buttonBack, #buttonMainMenu, #buttonSearchRecipe, #buttonThems, #buttonAddNewRecipe{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-border-color: grey;
+    -fx-border-radius: 5px;
+}
+
+#list .list-view .list-cell:even {
+    -fx-background-color: #EDF5E6;
+    -fx-text-fill: black;
+}
+#list .list-view .list-cell:odd {
+    -fx-background-color:  #EDF5E6;
+    -fx-text-fill: black;
 }
